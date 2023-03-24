@@ -9,7 +9,7 @@ namespace Generics_Problems
         {
             Console.WriteLine("Generics based problems");
             Console.WriteLine("Select given options");
-            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class");
+            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class\n4.Find Minimum Number");
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
             {
@@ -166,11 +166,20 @@ namespace Generics_Problems
                             genericchar.DeleteElement();
                             break;
 
-
-
                     }
                     break;
 
+                    case 4:
+                    Console.WriteLine("Select option for Find Minimum  Int,Float,string");
+                    Console.WriteLine("1Minimum Int Value.");
+                    int Check = Convert.ToInt16(Console.ReadLine());
+                    switch (Check)
+                    {
+                        case 1: Console.WriteLine("Minimum Integer is ");
+                        Console.WriteLine(FindMinimum.FindMinIntegerNumbar(10,20,30));
+                            break;
+                    }
+                    break;
             }
         }
             
