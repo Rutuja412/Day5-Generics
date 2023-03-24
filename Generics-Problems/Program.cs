@@ -9,7 +9,7 @@ namespace Generics_Problems
         {
             Console.WriteLine("Generics based problems");
             Console.WriteLine("Select given options");
-            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class\n4.Find Minimum Number");
+            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class\n4.Find Minimum Number\n5.Find Minimum Using Generic Method");
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
             {
@@ -169,24 +169,47 @@ namespace Generics_Problems
                     }
                     break;
 
-                    case 4:
+                case 4:
                     Console.WriteLine("Select option for Find Minimum  Int,Float,string");
                     Console.WriteLine("1Minimum Int Value.\n2.Mini double value\n3.mini String ");
                     int Check = Convert.ToInt16(Console.ReadLine());
                     switch (Check)
                     {
-                        case 1: Console.WriteLine("Minimum Integer is ");
-                        Console.WriteLine(FindMinimum.FindMinIntegerNumbar(10,20,30));
+                        case 1:
+                            Console.WriteLine("Minimum Integer is ");
+                            Console.WriteLine(FindMinimum.FindMinIntegerNumbar(10, 20, 30));
                             break;
-                       case 2: Console.WriteLine("Minimum double value is :");
-                            Console.WriteLine(FindMinimum.FindMinFloatValue(10.2,20.1,30.1));
+                        case 2:
+                            Console.WriteLine("Minimum double value is :");
+                            Console.WriteLine(FindMinimum.FindMinFloatValue(10.2, 20.1, 30.1));
                             break;
                         case 3:
                             Console.WriteLine("Minimum string is :");
-                       Console.WriteLine(FindMinimum.FindMinStringValue("Apple","Banana","Pineapple"));
+                            Console.WriteLine(FindMinimum.FindMinStringValue("Apple", "Banana", "Pineapple"));
                             break;
                     }
                     break;
+
+                case 5: Console.WriteLine("Find Minimum Using Generic Method");
+                        Console.WriteLine("Select option for Find Minimum  Int,Float,string");
+                    Console.WriteLine("1Minimum Int Value.\n2.Mini double value\n3.mini String ");
+                    int Number = Convert.ToInt16(Console.ReadLine());
+                    switch(Number)
+                    {
+                        case 1:
+                            Console.WriteLine("Minimum Int Value");
+                            Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<int>(11,22,33));
+                            break;
+                            case 2: Console.WriteLine("Minimum Float Value ");
+                                Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<double>(11.1,33.3,66.6));
+                            break;
+                            case 3: Console.WriteLine("Minimum String Value ");
+                                Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<string>("Ant","Elephant","Dog"));
+                            break;
+                    }
+                    break;
+
+
             }
         }
             
