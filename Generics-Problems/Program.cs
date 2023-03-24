@@ -171,15 +171,19 @@ namespace Generics_Problems
 
                     case 4:
                     Console.WriteLine("Select option for Find Minimum  Int,Float,string");
-                    Console.WriteLine("1Minimum Int Value.\n2.Mini double value ");
+                    Console.WriteLine("1Minimum Int Value.\n2.Mini double value\n3.mini String ");
                     int Check = Convert.ToInt16(Console.ReadLine());
                     switch (Check)
                     {
                         case 1: Console.WriteLine("Minimum Integer is ");
                         Console.WriteLine(FindMinimum.FindMinIntegerNumbar(10,20,30));
                             break;
-                            case 2: Console.WriteLine("Minimum double value is :");
+                       case 2: Console.WriteLine("Minimum double value is :");
                             Console.WriteLine(FindMinimum.FindMinFloatValue(10.2,20.1,30.1));
+                            break;
+                        case 3:
+                            Console.WriteLine("Minimum string is :");
+                       Console.WriteLine(FindMinimum.FindMinStringValue("Apple","Banana","Pineapple"));
                             break;
                     }
                     break;
