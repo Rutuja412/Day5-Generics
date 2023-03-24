@@ -9,7 +9,7 @@ namespace Generics_Problems
         {
             Console.WriteLine("Generics based problems");
             Console.WriteLine("Select given options");
-            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class\n4.Find Minimum Number\n5.Find Minimum Using Generic Method");
+            Console.WriteLine("1.Delete Array Element \n2.Delete using Generic Method \n3.Delete using Generic Class\n4.Find Minimum Number\n5.Find Minimum Using Generic Method \n6 Generic class Find minimum");
             int option = Convert.ToInt16(Console.ReadLine());
             switch (option)
             {
@@ -190,26 +190,51 @@ namespace Generics_Problems
                     }
                     break;
 
-                case 5: Console.WriteLine("Find Minimum Using Generic Method");
-                        Console.WriteLine("Select option for Find Minimum  Int,Float,string");
+                case 5:
+                    Console.WriteLine("Find Minimum Using Generic Method");
+                    Console.WriteLine("Select option for Find Minimum  Int,Float,string");
                     Console.WriteLine("1Minimum Int Value.\n2.Mini double value\n3.mini String ");
                     int Number = Convert.ToInt16(Console.ReadLine());
-                    switch(Number)
+                    switch (Number)
                     {
                         case 1:
                             Console.WriteLine("Minimum Int Value");
-                            Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<int>(11,22,33));
+                            Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<int>(11, 22, 33));
                             break;
-                            case 2: Console.WriteLine("Minimum Float Value ");
-                                Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<double>(11.1,33.3,66.6));
+                        case 2:
+                            Console.WriteLine("Minimum Float Value ");
+                            Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<double>(11.1, 33.3, 66.6));
                             break;
-                            case 3: Console.WriteLine("Minimum String Value ");
-                                Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<string>("Ant","Elephant","Dog"));
+                        case 3:
+                            Console.WriteLine("Minimum String Value ");
+                            Console.WriteLine(FindMinimumGenericMethod.FindMinimumValue<string>("Ant", "Elephant", "Dog"));
                             break;
                     }
                     break;
-
-
+                case 6:
+                    Console.WriteLine("Generic class ");
+                    Console.WriteLine("Find Minimum Using Generic Method");
+                    Console.WriteLine("Select option for Find Minimum  Int,Float,string");
+                    Console.WriteLine("1Minimum Int Value.\n2.Mini double value\n3.mini String ");
+                    int choice = Convert.ToInt16(Console.ReadLine());
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("Minimum Int Value");
+                           // FindMinimumGenericClass<int> intGeneric = new FindMinimumGenericClass<int>(1, 2, 3);
+                            
+                            Console.WriteLine(FindMinimumGenericClass<int>.FindMinimum(100,200,300));
+                            break;
+                        case 2:
+                            Console.WriteLine("Minimum Float Value ");
+                            Console.WriteLine(FindMinimumGenericClass<float>.FindMinimum(100.1f, 20.1f, 30.1f));
+                            break;
+                        case 3:
+                            Console.WriteLine("Minimum String Value ");
+                            Console.WriteLine(FindMinimumGenericClass<string>.FindMinimum("Ant", "Elephant", "Dog"));
+                            break;
+                    }
+                    break;
             }
         }
             
